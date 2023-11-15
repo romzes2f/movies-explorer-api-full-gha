@@ -5,8 +5,8 @@ const allowedCors = [
     'http://localhost:3001',
     'https://localhost:3002',
     'http://localhost:3002',
-    'https://romzes2f.nomoredomainsmonster.ru',
-    'http://romzes2f.nomoredomainsmonster.ru',
+    'https://api.romzes2f.nomoredomainsmonster.ru',
+    'http://api.romzes2f.nomoredomainsmonster.ru',
 ];
 
 module.exports = (req, res, next) => {
