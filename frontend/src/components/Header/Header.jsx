@@ -4,7 +4,8 @@ import { useLocation, NavLink, Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import account from "../../images/account-shape.svg";
 import menu from "../../images/header-menu.svg";
-import logo from "../../images/logo.svg";
+import logoLoggedIn from "../../images/logo_authorized.svg";
+import logoNotLoggedIn from "../../images/logo.svg";
 import Sidebar from "../Sidebar/Sidebar";
 
 function Header({ loggedIn }) {
@@ -21,12 +22,14 @@ function Header({ loggedIn }) {
         setIsClicked(false);
     }
 
+    const logoImage = loggedIn ? logoLoggedIn : logoNotLoggedIn;
+
     return (
         <>
             {!loggedIn ? (
                 <header className="header" id="header">
                     <Link to="/" className="header__logo">
-                        <img src={logo} alt="logo" />
+                        <img src={logoNotLoggedIn} alt="logo" />
                     </Link>
                     <div className="header__button-wrapper">
                         <Link to="/signup" className="header__button header__button-shadow">
@@ -40,7 +43,7 @@ function Header({ loggedIn }) {
             ) : (
                 <header className="header header_white" id="header_white">
                     <Link to="/" className="header__logo">
-                        <img src={logo} alt="logo" />
+                        <img src={logoLoggedIn} alt="logo" />
                     </Link>
                     <div className="header__button-wrapper header__button-wrapper_films">
                         <NavLink to="/movies" className={setActiveButton}>
