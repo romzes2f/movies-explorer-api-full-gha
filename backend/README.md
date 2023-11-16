@@ -1,8 +1,8 @@
-# movies-explorer-api
-Бэкенд часть дипломной работы
+# movies-explorer-api-full-gha
+Дипломная работа
 
 ## Ccылка на Pull Request:
-https://github.com/romzes2f/movies-explorer-api/pull/1
+https://github.com/romzes2f/movies-explorer-api-full-gha/pull/1
 
-## Домен, по которому можно обратиться к серверу проекта:
-https://api.romzes2f.nomoredomainsmonster.ru
+## Ссылка на проект:
+https://romzes2f.nomoredomainsmonster.ru
