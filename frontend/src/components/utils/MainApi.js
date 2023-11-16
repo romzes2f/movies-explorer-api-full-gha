@@ -1,6 +1,7 @@
 import { handleSendRequest } from './utils';
 
 export const BASE_URL = 'https://api.romzes2f.nomoredomainsmonster.ru';
+// export const BASE_URL = 'http://localhost:3000';
 
 export const register = (name, email, password) => {
     return fetch(`${BASE_URL}/signup`, {
