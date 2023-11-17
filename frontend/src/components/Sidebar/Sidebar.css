@@ -1,0 +1,120 @@
+.navigation__page-overlay {
+    display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .navigation__page-overlay {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 5;
+        justify-content: space-between;
+    }
+
+    .navigation__menu {
+        width: 520px;
+        min-height: 100vh;
+        padding: 159px 90px 90px 90px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+    }
+
+    .navigation__overlay-wrapper {
+        flex: 1 1 auto;
+    }
+
+    .navigation__close-button {
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        background-image: url("../../images/close-button.svg");
+        border: none;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .navigation__close-button:hover {
+        opacity: 0.6;
+    }
+
+    .navigation__links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .navigation__link {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: center;
+        color: black;
+        width: max-content;
+        border-bottom: 2px solid transparent;
+    }
+
+    .navigation__link_active {
+        color: #2be080;
+    }
+
+    .navigation__link:hover {
+        border-bottom: 2px solid white;
+    }
+
+    .navigation__account-button {
+        width: 100px;
+        height: 32px;
+        text-decoration: none;
+        background: white;
+        box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.08);
+        border-radius: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .navigation__account-text {
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        color: black;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .navigation__account-button:hover {
+        opacity: 0.6;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navigation__menu {
+        width: 100%;
+        padding: 144px 10px 46px 10px;
+    }
+
+    .navigation__overlay-wrapper {
+        display: none;
+    }
+
+    .navigation__links-list {
+        gap: 15px;
+    }
+}

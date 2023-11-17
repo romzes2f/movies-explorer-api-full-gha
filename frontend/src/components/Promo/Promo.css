@@ -1,0 +1,131 @@
+.promo {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #073042;
+}
+
+.promo__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 70px;
+    display: grid;
+    grid-template-columns: repeat(2 min-content);
+    grid-template-rows: repeat(3 max-content);
+    column-gap: 190px;
+    justify-content: center;
+}
+
+.promo__heading {
+    max-width: 640px;
+    margin: 0;
+    margin-top: 75px;
+    padding: 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 116%;
+    color: white;
+}
+
+.promo__paragraph {
+    max-width: 310px;
+    margin: 0;
+    margin-top: 36px;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 120%;
+    color: white;
+    opacity: 50%;
+}
+
+.promo__logo {
+    width: 310px;
+    height: 304px;
+    margin: 0;
+    margin-top: 75px;
+    padding: 0;
+    grid-row: 1 / span 3;
+    grid-column: 2;
+    justify-self: right;
+}
+
+.promo__button {
+    max-width: 129px;
+    min-height: 36px;
+    margin: 0;
+    margin-top: 146px;
+    margin-bottom: 75px;
+    padding: 0;
+    background: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 1024px) {
+    .promo__container {
+        column-gap: 70px;
+    }
+}
+
+@media all and (max-width: 878px) {
+    .promo__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .promo__logo {
+        margin-top: 140px;
+    }
+
+    .promo__heading {
+        margin-top: 48px;
+        text-align: center;
+        font-size: 40px;
+        line-height: 125%;
+    }
+
+    .promo__paragraph {
+        max-width: 260px;
+        text-align: center;
+        margin-top: 22px;
+    }
+
+    .promo__button {
+        min-width: 129px;
+        margin-top: 92px;
+        margin-bottom: 76px;
+    }
+}
+
+@media all and (max-width: 561px) {
+    .promo__logo {
+        width: 210px;
+        height: 206px;
+        margin-top: 70px;
+    }
+
+    .promo__heading {
+        min-width: 300px;
+        margin-top: 44px;
+        font-size: 30px;
+        line-height: 127%;
+        letter-spacing: -0.04em;
+    }
+
+    .promo__paragraph {
+        min-width: 243px;
+        margin-top: 24px;
+    }
+
+    .promo__button {
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+}

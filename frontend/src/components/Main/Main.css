@@ -1,0 +1,26 @@
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.main__heading {
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 23px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 121%;
+    letter-spacing: -0.04em;
+    border-bottom: 1px solid black;
+}
+
+@media all and (max-width: 400px) {
+    .main__heading {
+        padding-bottom: 28px;
+        font-size: 18px;
+    }
+}
