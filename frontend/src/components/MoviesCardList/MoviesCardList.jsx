@@ -64,12 +64,17 @@ function MoviesCardList({
 
     return (
         <section className="cards">
-            {isLoading && <Preloader />}
-            {isNotFound && !isLoading && <SearchError errorText={"Not found"} />}
+            {isLoading && (
+                <div>
+                    <Preloader />
+                    {/* Дополнительные индикаторы загрузки или сообщения могут быть добавлены здесь */}
+                </div>
+            )}
+            {isNotFound && !isLoading && <SearchError errorText={"Ничего не найдено"} />}
             {isReqError && !isLoading && (
                 <SearchError
                     errorText={
-                        "Sorry! An error occurred during the request. There may be a connection problem or the server is unavailable. Wait a bit and try again"
+                        "Извините, произошла ошибка во время запроса. Возможны проблемы с подключением или сервер недоступен. Подождите немного и повторите попытку"
                     }
                 />
             )}

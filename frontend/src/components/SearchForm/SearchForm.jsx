@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./SearchForm.css";
+import "../SearchError/SearchError.css";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 
 function SearchForm({ isShortMovies, searchAndFilterMovies, onFilterMovies }) {
@@ -35,7 +36,7 @@ function SearchForm({ isShortMovies, searchAndFilterMovies, onFilterMovies }) {
 
     return (
         <section>
-            <form id="form" onSubmit={onSubmitUserForm} className="search-form">
+            <form id="form" onSubmit={onSubmitUserForm} className="search-form" noValidate>
                 <input
                     type="text"
                     placeholder="Фильм"
@@ -47,15 +48,14 @@ function SearchForm({ isShortMovies, searchAndFilterMovies, onFilterMovies }) {
                 <button type="submit" className="search-form__submit app__button">
                     Найти
                 </button>
-
+                {isQueryError && (
+                    <span className="search__form-error">Нужно ввести ключевое слово</span>
+                )}
             </form>
             <FilterCheckbox
                 isShortMovies={isShortMovies}
                 onFilterMovies={onFilterMovies}
             />
-            {isQueryError && (
-                <span className="search__form-error">Нужно ввести ключевое слово</span>
-            )}
         </section>
     );
 }
